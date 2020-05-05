@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import { motion } from "framer-motion";
 
-
-const Products = () => (
+const Products = (props) => (
 	<div className="container">
 		<motion.div
 			initial={{ opacity: 0, y: -150 }}

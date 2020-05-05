@@ -2,26 +2,29 @@ import Layout from '../../components/Layout';
 import React, { Component, useRef } from 'react'
 import { motion } from "framer-motion";
 
-class Black extends Component {	
-  constructor() {
-    super();
-      this.showModal = () => {
-				this.setState({ show: true });				
-			};
-			this.hideModal = () => {
-				this.setState({ show: false });
-			};
+class Black extends Component {
+	constructor() {
+		super();
+		this.showModal = () => {
+			this.setState({ show: true });
+		};
+		this.hideModal = () => {
+			this.setState({ show: false });
+		};
 		this.imgRef = React.createRef();
-    this.state = { show: false };
+		this.state = { show: false };
 		this.images = ["BLANK", "BLANK", "BLANK", "BLANK"];
 		this.imgModal;
-  }
+	}
 
-  render() {
-    this.showHideClassName = this.state.show ? "display-grid" : "display-none";
-    return (
+
+	render() {
+		this.showHideStyleName = this.state.show
+			? { left: '0px' }
+			: { left: '-100vw' };
+		return (
 			<Layout>
-				<div className={this.showHideClassName} id="modal">
+				<div style={this.showHideStyleName} className="display-grid" id="modal">
 					<div className="closeModal" onClick={this.hideModal}>
 						X
 					</div>
@@ -73,6 +76,18 @@ class Black extends Component {
 							Luxurious instagram revealing. Sari ensemble emphasis expirement
 							impeccable modification trademark waistline minimalist.
 						</h2>
+						<div
+							className="button snipcart-add-item"
+							data-item-id="1"
+							data-item-name="\\ Black --:--"
+							data-item-price={69.99}
+							data-item-image={this.modalImage}
+							data-item-description="Black Shirt item"
+							onClick={this.hideModal}
+							data-item-url="/products/black"
+						>
+							ADD TO CART
+						</div>
 					</div>
 				</div>
 				<div id="products">
@@ -98,7 +113,7 @@ class Black extends Component {
 								animate={{ opacity: 1 }}
 								exit={{ opacity: 0 }}
 								whileHover={{ scale: 1.05 }}
-								onTap={{ scale: 0.95 }}
+								whileTap={{ scale: 0.95 }}
 							>
 								<img
 									className="image"
@@ -119,25 +134,33 @@ class Black extends Component {
 					.display-grid {
 						display: grid;
 					}
-					.display-none {
-						display: none;
-					}
 					.display {
 						background-color: #f1eee9;
 						display: flex;
 						align-items: center;
 						justify-content: center;
 					}
+					.button {
+						border: 1px solid #f1eee9;
+						border-radius: 5px;
+						padding: 1em 1.5em;
+						cursor: pointer;
+						transition: all 250ms;
+						font-weight: bold;
+					}
+					.button:hover {
+						background: #f1eee9;
+						color: #101010;
+					}
 					#modal {
 						height: 100vh;
 						width: 100vw;
 						position: fixed;
 						top: 0;
-						left: 0;
 						z-index: 3;
 						background: #101010;
 						grid-template-columns: 50% 50%;
-						transition: all 1s;
+						transition: all 250ms ease-out;
 					}
 					#products {
 						width: 100%;
@@ -191,7 +214,7 @@ class Black extends Component {
 				`}</style>
 			</Layout>
 		);
-  }
+	}
 }
 
 
