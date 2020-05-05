@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout';
-import React, { Component, useRef } from 'react'
+import React, { Component, useRef } from 'react';
 import { motion } from "framer-motion";
-
+import {useRouter, withRouter} from "next/router";
 class Black extends Component {
 	constructor() {
 		super();
@@ -218,4 +218,4 @@ class Black extends Component {
 }
 
 
-export default Black
+export default withRouter(Black);
