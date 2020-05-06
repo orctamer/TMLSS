@@ -6,7 +6,7 @@ const Products = (props) => (
 		<motion.div
 			initial={{ opacity: 0, y: -150 }}
 			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: .25 }}
+			transition={{ duration: 0.25 }}
 		>
 			<h1>Products</h1>
 		</motion.div>
@@ -19,7 +19,7 @@ const Products = (props) => (
 				>
 					\\ Black --:--
 				</motion.div>
-				<Link href="/products/black">
+				<a  href="/products/black">
 					<motion.img
 						className="image"
 						initial={{ opacity: 0, x: -125 }}
@@ -30,7 +30,7 @@ const Products = (props) => (
 						src="BLANK.png"
 						style={{ marginTop: "1em", cursor: "pointer", maxWidth: "370px" }}
 					/>
-				</Link>
+				</a>
 			</div>
 			<div className="product">
 				<motion.div
@@ -40,17 +40,17 @@ const Products = (props) => (
 				>
 					\\ White --:--
 				</motion.div>
-				<Link href="/products/white">
+				<a href="/products/white">
 					<motion.img
 						className="image"
 						whileHover={{ scale: 1.05 }}
 						whileTap={{ scale: 0.95 }}
 						initial={{ opacity: 0, x: 125 }}
 						animate={{ opacity: 1, x: 0 }}
-						src="BLANK.png"
+						src="./BLANK.png"
 						style={{ marginTop: "1em", cursor: "pointer", maxWidth: "370px" }}
 					/>
-				</Link>
+				</a>
 			</div>
 		</div>
 		<style jsx>{`

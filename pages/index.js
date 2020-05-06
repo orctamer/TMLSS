@@ -20,12 +20,11 @@ const Home = () => (
 				justify-content: center;
 				align-items: center;
 				flex-direction: column;
+				position: relative;
 			}
 			h1 {
 				font-size: 10vw;
 				font-family: Arial;
-				-webkit-text-stroke-width: 1px;
-				-webkit-text-stroke-color: white;
 			}
 			h2 {
 				font-family: Arial, sans-serif;

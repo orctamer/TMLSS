@@ -6,6 +6,7 @@ const Layout = (props) => (
 		<Head>
 			<title>T:ML:SS</title>
 			<link rel="icon" href="./favicon.ico" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 			<link
 				href="https://fonts.googleapis.com/css?family=Nunito:400,800|Rock+Salt&display=swap"
@@ -74,6 +75,7 @@ const Layout = (props) => (
 				}
 				a {
 					text-decoration: none;
+					color: inherit;
 				}
 				a:hover {
 					text-decoration: none;
