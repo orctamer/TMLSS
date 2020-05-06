@@ -9,8 +9,8 @@ const Home = () => (
 			transition={{ duration: 1 }}
 		>
 			<div className="container">
-				<h1>T:ML:SS</h1>
-				<h2>Coming Soon</h2>
+				<h1 style={{fontSize: '10vw', fontFamily: 'Arial', fontWeight: '600', lineHeight: 1}}>T:ML:SS</h1>
+				<h2 style={{fontWeight: "600", fontSize: "1.5em"}}>Coming Soon</h2>
 			</div>
 		</motion.div>
 		<style jsx>{`

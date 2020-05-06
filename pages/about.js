@@ -9,7 +9,7 @@ class About extends Component {
   render() {
     return (
 			<Layout>
-				<div className="title">
+				<div className="mtitle">
 					<motion.div
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ class About extends Component {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1 }}
 					>
-						<p>
+						<div>
 							Item motif bows tailor look skirt signature wholesale
 							craftmanship. Extraordinary hippie trade imagination commercial
 							synthetic production. Garment beautiful posture jersey color
@@ -59,12 +59,12 @@ class About extends Component {
 							apron sportswear collection combination identity bodice showcase
 							leotard. Wholesale lingerie glossy runway vintage piece artistry
 							sewing retailer bodice item.
-						</p>
+						</div>
 					</motion.div>
 					<motion.div
 						initial={{ opacity: 0, x: 50 }}
 						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: .5, delay: 1 }}
+						transition={{ duration: 0.5, delay: 1 }}
 					>
 						<p className="author">-ANTi</p>
 					</motion.div>
@@ -74,7 +74,7 @@ class About extends Component {
 						.author {
 							font-weight: 600;
 							text-align: right;
-							margin-top: 2em;
+							margin: 2em 0;
 							font-size: 20pt;
 							font-family: "Rock Salt";
 						}
@@ -82,10 +82,10 @@ class About extends Component {
 							padding: 0;
 							margin: 0;
 						}
-						.title {
+						.mtitle {
 							width: 80%;
 							margin: 0 auto;
-							height: calc(100vh - 178px);
+							min-height: 80vh;
 						}
 						.ptitle {
 							margin: 0;

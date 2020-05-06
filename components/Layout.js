@@ -2,7 +2,7 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 const Layout = (props) => (
-	<div className="container">
+	<div className="main">
 		<Head>
 			<title>T:ML:SS</title>
 			<link rel="icon" href="./favicon.ico" />
@@ -18,6 +18,11 @@ const Layout = (props) => (
 			/>
 			<link
 				rel="stylesheet"
+				href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"
+			/>
+			<link rel="stylesheet" href="../style.css" />
+			<link
+				rel="stylesheet"
 				href="https://cdn.snipcart.com/themes/v3.0.12/default/snipcart.css"
 			/>
 			<script src="https://cdn.snipcart.com/themes/v3.0.12/default/snipcart.js"></script>
@@ -31,7 +36,7 @@ const Layout = (props) => (
 		<div className="main">{props.children}</div>
 		<Footer />
 		<style jsx>{`
-			.container {
+			.main {
 				background-color: #f1eee9;
 				margin: 0;
 				padding: 0;
@@ -43,48 +48,7 @@ const Layout = (props) => (
 		`}</style>
 		<style global jsx>
 			{`
-				* {
-					box-sizing: border-box;
-				}
-				::-webkit-scrollbar {
-					width: 5px;
-				}
-				::-webkit-scrollbar-track {
-					background: #000;
-				}
-				::-webkit-scrollbar-thumb {
-					background: #888;
-				}
-				::-webkit-scrollbar-thumb:hover {
-					background: #f1eee9;
-				}
-				h1,
-				h2 {
-					margin: 0;
-					padding: 0;
-				}
-				html,
-				body {
-					font-family: "Nunito", sans-serif;
-					margin: 0;
-					padding: 0;
-				}
-				body {
-					background: #101010;
-					height: 100vh;
-				}
-				a {
-					text-decoration: none;
-					color: inherit;
-				}
-				a:hover {
-					text-decoration: none;
-					cursor: pointer;
-				}
-				.snipcart-cart-header__title,
-				.snipcart__font--std {
-					text-transform: uppercase;
-				}
+
 			`}
 		</style>
 	</div>

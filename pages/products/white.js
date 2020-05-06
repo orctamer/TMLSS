@@ -59,7 +59,7 @@ class White extends Component {
 						}}
 						className="display"
 					>
-						<h1>
+						<h1 style={{ fontSize: "2em" }}>
 							\\ White --:--{" "}
 							<p style={{ textAlign: "center" }} className="price">
 								$69.99 + tax
@@ -77,7 +77,7 @@ class White extends Component {
 							impeccable modification trademark waistline minimalist.
 						</h2>
 						<div
-							className="button snipcart-add-item"
+							className="purchase snipcart-add-item"
 							data-item-id="2"
 							data-item-name="\\ White --:--"
 							data-item-price={69.99}
@@ -140,7 +140,7 @@ class White extends Component {
 						align-items: center;
 						justify-content: center;
 					}
-					.button {
+					.purchase {
 						border: 1px solid #f1eee9;
 						border-radius: 5px;
 						padding: 1em 1.5em;
@@ -148,7 +148,7 @@ class White extends Component {
 						transition: all 250ms;
 						font-weight: bold;
 					}
-					.button:hover {
+					.purchase:hover {
 						background: #f1eee9;
 						color: #101010;
 					}

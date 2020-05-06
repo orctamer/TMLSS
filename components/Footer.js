@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const Footer = () => (
-	<div className="container">
+	<div className="main">
 		<h1>T:ML:SS</h1>
 		<div className="brands">
 			<a href="https://www.instagram.com/tmlss_/?hl=en" target="_blank">
@@ -19,7 +19,7 @@ const Footer = () => (
 			a {
 				color: #f1eee9;
 			}
-			.container {
+			.main {
 				width: 100%;
 				background: black;
 				margin: 0;
