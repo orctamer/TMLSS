@@ -66,7 +66,7 @@ class About extends Component {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.5, delay: 1 }}
 					>
-						<p className="author">-ANTi</p>
+						<p className="author">-Jason Bates</p>
 					</motion.div>
 				</section>
 				<style jsx>
@@ -76,7 +76,7 @@ class About extends Component {
 							text-align: right;
 							margin: 2em 0;
 							font-size: 20pt;
-							font-family: "Rock Salt";
+							font-family: "Hijrnotes PERSONAL USE ONLY";
 						}
 						p {
 							padding: 0;

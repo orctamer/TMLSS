@@ -9,8 +9,13 @@ const Layout = (props) => (
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 			<link
-				href="https://fonts.googleapis.com/css?family=Nunito:400,800|Rock+Salt&display=swap"
+				href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap"
 				rel="stylesheet"
+			/>
+			<link
+				href="//db.onlinewebfonts.com/c/52168a40651e4b785587e46d799cd530?family=Hijrnotes+PERSONAL+USE+ONLY"
+				rel="stylesheet"
+				type="text/css"
 			/>
 			<link
 				href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
@@ -47,9 +52,7 @@ const Layout = (props) => (
 			}
 		`}</style>
 		<style global jsx>
-			{`
-
-			`}
+			{``}
 		</style>
 	</div>
 );
