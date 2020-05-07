@@ -28,8 +28,8 @@ class Navbar extends Component {
 					<div className="navbar-brand">
 						<a className="navbar-item" href="/">
 							<img
-								style={{ maxHeight: "280px" }}
-								src="../logo.png"
+								style={{ maxHeight: "280px", margin: "10px" }}
+								src="../logo.svg"
 								width="230"
 								height="85"
 							/>

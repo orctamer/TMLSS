@@ -1,20 +1,22 @@
 import Link from 'next/link'
 
 const Footer = () => (
-	<div className="main">
-		<h1>T:ML:SS</h1>
-		<div className="brands">
-			<a href="https://www.instagram.com/tmlss_/?hl=en" target="_blank">
-				<i className="fab fa-instagram"></i>
-			</a>
-			<a href="https://twitter.com/tmlss_?lang=en" target="_blank">
-				<i className="fab fa-twitter"></i>
-			</a>
-			<a href="https://www.instagram.com/tmlss_/?hl=en" target="_blank">
-				<i className="fab fa-facebook"></i>
-			</a>
+	<footer className="footer" style={{ backgroundColor: "#000000" }}>
+		<div className="content has-text-centered">
+			<h1>T:ML:SS</h1>
+			<div className="brands">
+				<a href="https://www.instagram.com/tmlss_/?hl=en" target="_blank">
+					<i className="fab fa-instagram"></i>
+				</a>
+				<a href="https://twitter.com/tmlss_?lang=en" target="_blank">
+					<i className="fab fa-twitter"></i>
+				</a>
+				<a href="https://www.instagram.com/tmlss_/?hl=en" target="_blank">
+					<i className="fab fa-facebook"></i>
+				</a>
+			</div>
+			<h2>Copyright &copy;{new Date().getFullYear()}</h2>
 		</div>
-		<h2>Copyright &copy;{new Date().getFullYear()}</h2>
 		<style jsx>{`
 			a {
 				color: #f1eee9;
@@ -51,7 +53,7 @@ const Footer = () => (
 				font-size: 10pt;
 			}
 		`}</style>
-	</div>
+	</footer>
 );
 
 export default Footer

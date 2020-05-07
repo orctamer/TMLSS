@@ -1,8 +1,7 @@
-import Link from 'next/link'
 import { motion } from "framer-motion";
 
 const Products = (props) => (
-	<div className="container">
+	<section className="container section">
 		<motion.div
 			initial={{ opacity: 0, y: -150 }}
 			animate={{ opacity: 1, y: 0 }}
@@ -10,16 +9,18 @@ const Products = (props) => (
 		>
 			<h1>Products</h1>
 		</motion.div>
-		<div id="products">
-			<div className="product">
+		<div className="columns">
+			<div className="column is-centered has-text-centered">
 				<motion.div
 					initial={{ opacity: 0, x: -150 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5 }}
 				>
-					\\ Black --:--
+					<h2 style={{ fontSize: "16pt", marginBottom: "1em" }}>
+						\\ BLACK --:--
+					</h2>
 				</motion.div>
-				<a  href="/products/black">
+				<a href="/products/black">
 					<motion.img
 						className="image"
 						initial={{ opacity: 0, x: -125 }}
@@ -28,17 +29,24 @@ const Products = (props) => (
 						whileHover={{ scale: 1.05 }}
 						whileTap={{ scale: 0.95 }}
 						src="BLANK.png"
-						style={{ marginTop: "1em", cursor: "pointer", maxWidth: "370px" }}
+						style={{
+							marginTop: "1em",
+							cursor: "pointer",
+
+							margin: "0 auto",
+						}}
 					/>
 				</a>
 			</div>
-			<div className="product">
+			<div className="column is-centered has-text-centered">
 				<motion.div
 					initial={{ opacity: 0, x: 150 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5 }}
 				>
-					\\ White --:--
+					<h2 style={{ fontSize: "16pt", marginBottom: "1em" }}>
+						\\ WHITE --:--
+					</h2>
 				</motion.div>
 				<a href="/products/white">
 					<motion.img
@@ -48,11 +56,16 @@ const Products = (props) => (
 						initial={{ opacity: 0, x: 125 }}
 						animate={{ opacity: 1, x: 0 }}
 						src="./BLANK.png"
-						style={{ marginTop: "1em", cursor: "pointer", maxWidth: "370px" }}
+						style={{
+							marginTop: "1em",
+							cursor: "pointer",
+							margin: "0 auto",
+						}}
 					/>
 				</a>
 			</div>
 		</div>
+
 		<style jsx>{`
 			h1 {
 				padding: 2em;
@@ -85,7 +98,7 @@ const Products = (props) => (
 				height: 350px;
 			}
 		`}</style>
-	</div>
+	</section>
 );
 
 export default Products

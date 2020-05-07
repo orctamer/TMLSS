@@ -4,7 +4,7 @@ import Footer from "./Footer";
 const Layout = (props) => (
 	<div className="main">
 		<Head>
-			<title>T:ML:SS</title>
+			<title>T:ML:SS {`${props.title ? " - " + props.title : ""}`}</title>
 			<link rel="icon" href="./favicon.ico" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

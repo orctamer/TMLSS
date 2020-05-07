@@ -8,8 +8,8 @@ class About extends Component {
   }
   render() {
     return (
-			<Layout>
-				<div className="mtitle">
+			<Layout title="About">
+				<section className="section mtitle">
 					<motion.div
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ class About extends Component {
 					>
 						<p className="author">-ANTi</p>
 					</motion.div>
-				</div>
+				</section>
 				<style jsx>
 					{`
 						.author {
