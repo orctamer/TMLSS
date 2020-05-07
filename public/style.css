@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'hijrnotes_personal_use_onlyRg';
+    src: url('hijrnotes_personal_use_only-webfont.woff2') format('woff2'),
+         url('hijrnotes_personal_use_only-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 * {
 	box-sizing: border-box;
 }

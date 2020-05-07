@@ -13,11 +13,6 @@ const Layout = (props) => (
 				rel="stylesheet"
 			/>
 			<link
-				href="//db.onlinewebfonts.com/c/52168a40651e4b785587e46d799cd530?family=Hijrnotes+PERSONAL+USE+ONLY"
-				rel="stylesheet"
-				type="text/css"
-			/>
-			<link
 				href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
 				rel="stylesheet"
 			/>
