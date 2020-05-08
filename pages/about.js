@@ -16,11 +16,6 @@ class About extends Component {
 						transition={{ duration: 0.5 }}
 					>
 						<h1 className="ptitle">About</h1>
-						<div clasName="columns is-centered">
-							<div className="column">
-								<img style={{ width: "150px", marginBottom: '1.5em' }} src="tmlss.jpg" />
-							</div>
-						</div>
 					</motion.div>
 					<motion.div
 						initial={{ opacity: 0, x: -50 }}
