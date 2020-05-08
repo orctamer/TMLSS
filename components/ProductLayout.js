@@ -17,91 +17,103 @@ class ProductLayout extends Component {
   }
 
   render() {
-    this.showHideStyleName = this.state.show ? {left: '0px'} : {left: '-100vw'};
+		this.showHideStyleName = this.state.show ? {left: '0px'} : {left: '-100vw'};
+		this.showModalStyleName = this.state.show ? "is-active" : "";
     return (
 			<>
-				<div style={this.showHideStyleName} className="display-grid" id="modal">
-					<div className="closeModal" onClick={this.hideModal}>
-						X
-					</div>
-					<div className="display">
-						<div style={{ position: "relative"}}>
-							<h1
-								className="price"
-								style={{
-									color: "black",
-									fontSize: "24pt",
-									fontWeight: "bold",
-									position: "absolute",
-									top: "50%",
-									left: 0,
-									right: 0,
-									bottom: 0,
-								}}
-							>
-								PLACEHOLDER
-							</h1>
-							<img
-								style={{ height: "750px", border: "2px solid black" }}
-								src={this.modalImage}
-							/>
-						</div>
-					</div>
-					<div
-						style={{
-							backgroundColor: "#101010",
-							flexDirection: "column",
-							padding: "5em",
-						}}
-						className="display"
-					>
-						<h1 style={{ fontSize: "2em" }}>
-							\\ {this.props.name} --:--{" "}
-							<p style={{ textAlign: "center" }} className="price">
-								${this.props.price} + tax
-							</p>
-						</h1>
-						<h2 style={{ textAlign: "left", padding: "1em" }} className="price">
-							Sari modern influence sportswear trend commercial valuable.
-							Artistic extraordinary xs make up breathable conservative imprint
-							color effect. Embroidery pattern hand-made showcase. Value stock
-							artistry conformity pastel pumps creative vintage cut cheap.
-							Catwalk emphasis hippie hair trademark consumer influence
-							tailored. Imprint cheap wardrobe. Impeccable illustration
-							emphasis. Buttons beautiful zipper inspiration comfortable.
-							Luxurious instagram revealing. Sari ensemble emphasis expirement
-							impeccable modification trademark waistline minimalist.
-						</h2>
-						<div
-							className="purchase snipcart-add-item"
-							data-item-id={this.props.id}
-							data-item-name={`\\\\ ${this.props.name} --:--`}
-							data-item-price={this.props.price}
-							data-item-image={this.modalImage}
-							data-item-description={this.props.description}
-							onClick={this.hideModal}
-							data-item-url={this.props.url}
+				<div className={`modal ${this.showModalStyleName}`}>
+					<div className="modal-background"></div>
+					<div style={{ width: "calc(100vw - 40px)" }} className="modal-card">
+						<header
+							className="modal-card-head"
+							style={{
+								borderBottom: "1px solid #000000",
+								backgroundColor: "#101010",
+							}}
 						>
-							ADD TO CART
-						</div>
+							<p className="modal-card-title" style={{ color: "white" }}>
+								\\ {this.props.name} --:--
+							</p>
+							<button
+								onClick={this.hideModal}
+								className="delete"
+								aria-label="close"
+							></button>
+						</header>
+						<section
+							className="modal-card-body"
+							style={{ backgroundColor: "#101010" }}
+						>
+							<div className="columns">
+								<div className="column">
+									<img className="image" src={this.modalImage} />
+								</div>
+								<div className="column">
+									<section className="section">
+										<h1 style={{ fontSize: "2em", textAlign: "center" }}>
+											\\ {this.props.name} --:--{" "}
+											<p style={{ textAlign: "center" }} className="price">
+												${this.props.price} + tax
+											</p>
+										</h1>
+										<h2
+											style={{ textAlign: "left", padding: "1em" }}
+											className="price"
+										>
+											Sari modern influence sportswear trend commercial
+											valuable. Artistic extraordinary xs make up breathable
+											conservative imprint color effect. Embroidery pattern
+											hand-made showcase. Value stock artistry conformity pastel
+											pumps creative vintage cut cheap. Catwalk emphasis hippie
+											hair trademark consumer influence tailored. Imprint cheap
+											wardrobe. Impeccable illustration emphasis. Buttons
+											beautiful zipper inspiration comfortable. Luxurious
+											instagram revealing. Sari ensemble emphasis expirement
+											impeccable modification trademark waistline minimalist.
+										</h2>
+									</section>
+								</div>
+							</div>
+						</section>
+						<footer
+							className="modal-card-foot"
+							style={{
+								backgroundColor: "#101010",
+								borderTop: "1px solid #000000",
+							}}
+						>
+							<button
+								className="button is-black snipcart-add-item"
+								data-item-id={this.props.id}
+								data-item-name={`\\\\ ${this.props.name} --:--`}
+								data-item-price={this.props.price}
+								data-item-image={this.modalImage}
+								data-item-description={this.props.description}
+								onClick={this.hideModal}
+								data-item-url={this.props.url}
+							>
+								<i class="fas fa-shopping-cart" style={{marginRight: '5px'}}></i> Add To Cart
+							</button>
+							<button onClick={this.hideModal} className="button">Cancel</button>
+						</footer>
 					</div>
 				</div>
 				<section className="section">
-						<motion.div
-							initial={{ opacity: 0, y: -50 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
-						>
-							<div>
-								<h1 className="ptitle">
-									\\ {this.props.name} --:--{" "}
-									<span className="price">
-										<br />${this.props.price} + tax
-									</span>
-								</h1>
-							</div>
-						</motion.div>
-					
+					<motion.div
+						initial={{ opacity: 0, y: -50 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5 }}
+					>
+						<div>
+							<h1 className="ptitle">
+								\\ {this.props.name} --:--{" "}
+								<span className="price">
+									<br />${this.props.price} + tax
+								</span>
+							</h1>
+						</div>
+					</motion.div>
+
 					<div className="columns is-centered has-text-centered">
 						{this.images.map((x, index) => (
 							<div key={index} className="column">
@@ -174,7 +186,7 @@ class ProductLayout extends Component {
 						grid-gap: auto;
 						justify-items: center;
 					}
-					.image {						
+					.image {
 						cursor: pointer;
 					}
 					h2 {
