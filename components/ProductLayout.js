@@ -5,16 +5,18 @@ class ProductLayout extends Component {
   constructor(props) {
   super(props);
   this.showModal = () => {
-    this.setState({show: true})
+		this.setState({show: true})
+		document.body.style.position = 'fixed';
   }
   this.hideModal = () => {
-    this.setState({show: false})
+		this.setState({show: false})
+		document.body.style.position = 'static'
   }
   this.imgRef = React.createRef();
   this.state = { show: false };
   this.images = ["BLANK", "BLANK", "BLANK", "BLANK"];
-  this.imgModal;
-  }
+	this.imgModal;
+	}
 
   render() {
 		this.showHideStyleName = this.state.show ? {left: '0px'} : {left: '-100vw'};
