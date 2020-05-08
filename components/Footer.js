@@ -16,6 +16,11 @@ const Footer = () => (
 				</a>
 			</div>
 			<h2>Copyright &copy;{new Date().getFullYear()}</h2>
+			<a className="has-text-weight-bold " href="/terms">
+				Terms & Conditions
+			</a> - <a className="has-text-weight-bold " href="/policy">
+				Private Policy
+			</a>
 		</div>
 		<style jsx>{`
 			a {
