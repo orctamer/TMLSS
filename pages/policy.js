@@ -4,7 +4,7 @@ import {motion} from 'framer-motion';
 const Policy = () => (
 	<Layout title="Private Policy">
 		<section
-			style={{ height: "80vh" }}
+			style={{ minHeight: "80vh" }}
 			className="section is-centered container"
 		>
 			<motion.div
