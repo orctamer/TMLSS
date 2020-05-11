@@ -7,25 +7,25 @@ const Layout = (props) => (
 			<title>T:ML:SS {`${props.title ? " - " + props.title : ""}`}</title>
 			<link rel="icon" href="./favicon.ico" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+			<script src="../jquery.min.js"></script>
 			<link
-				href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap"
+				href="../fonts.css"
 				rel="stylesheet"
 			/>
 			<link
-				href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+				href="../all.css"
 				rel="stylesheet"
 			/>
 			<link
 				rel="stylesheet"
-				href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"
+				href="../bulma.min.css"
 			/>
 			<link rel="stylesheet" href="../style.css" />
 			<link
 				rel="stylesheet"
-				href="https://cdn.snipcart.com/themes/v3.0.12/default/snipcart.css"
+				href="../snipcart.css"
 			/>
-			<script src="https://cdn.snipcart.com/themes/v3.0.12/default/snipcart.js"></script>
+			<script src="../snipcart.js"></script>
 		</Head>
 		<div
 			id="snipcart"

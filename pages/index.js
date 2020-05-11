@@ -11,7 +11,7 @@ const Home = () => (
 			<div className="container">
 				<h1
 					style={{
-						fontSize: "10vw",
+						fontSize: "max(10vw, 64pt)",
 						fontFamily: "Arial",
 						fontWeight: "600",
 						lineHeight: 1,

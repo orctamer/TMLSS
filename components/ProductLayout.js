@@ -94,7 +94,7 @@ class ProductLayout extends Component {
 								onClick={this.hideModal}
 								data-item-url={this.props.url}
 							>
-								<i class="fas fa-shopping-cart" style={{marginRight: '5px'}}></i> Add To Cart
+								<i className="fas fa-shopping-cart" style={{marginRight: '5px'}}></i> Add To Cart
 							</button>
 							<button onClick={this.hideModal} className="button">Cancel</button>
 						</footer>
