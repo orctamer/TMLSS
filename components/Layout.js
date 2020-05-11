@@ -26,6 +26,7 @@ const Layout = (props) => (
 				href="../snipcart.css"
 			/>
 			<script src="../snipcart.js"></script>
+			<script src="../chat.js"></script>
 		</Head>
 		<div
 			id="snipcart"
@@ -46,9 +47,7 @@ const Layout = (props) => (
 				color: #f1eee9;
 			}
 		`}</style>
-		<style global jsx>
-			{``}
-		</style>
+
 	</div>
 );
 
