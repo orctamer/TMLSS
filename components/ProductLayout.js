@@ -85,7 +85,7 @@ class ProductLayout extends Component {
 							}}
 						>
 							<button
-								className="button is-black snipcart-add-item"
+								className="button is-dark snipcart-add-item"
 								data-item-id={this.props.id}
 								data-item-name={`\\\\ ${this.props.name} --:--`}
 								data-item-price={this.props.price}
