@@ -13,9 +13,11 @@ const white = ({white}) => (
 	</Layout>
 );
 
-white.getInitialProps = async ctx => {
-	const res = await Axios.get('http://localhost:3333/api')
-	return {white: res.data.white}
-}
+white.getInitialProps = async ({ req }) => {
+	const protocol = req.headers["x-forwarded-proto"];
+	const host = req.headers["x-forwarded-host"] || req.headers.host;
+	const res = await Axios.get(`${protocol}://${host}/api`);
+	return { white: res.data.white };
+};
 
 export default white;

@@ -13,8 +13,10 @@ const black = ({black}) => (
 	</Layout>
 );
 
-black.getInitialProps = async ctx => {
-	const res = await Axios.get('http://localhost:3333/api')
+black.getInitialProps = async ({req}) => {
+	const protocol = req.headers["x-forwarded-proto"];
+	const host = req.headers["x-forwarded-host"] || req.headers.host;
+	const res = await Axios.get(`${protocol}://${host}/api`);
 	return {black:res.data.black};
 }
 
